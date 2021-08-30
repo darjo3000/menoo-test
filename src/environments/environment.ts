@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrlApiLocal: 'http://localhost:8102/',
+  baseUrlApiMenoo: 'http://testing.menooservices.com/api/'
 };
 
 /*

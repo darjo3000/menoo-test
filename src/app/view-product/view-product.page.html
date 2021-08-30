@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-img #logo src="assets/images/logo-w.svg"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="'Back to list'" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-item *ngIf="product">
+    <ion-thumbnail slot="end">
+      <ion-img [src]="product.Thumbnail"></ion-img>
+    </ion-thumbnail>
+    <ion-label class="ion-text-wrap">
+      <h2>{{ product.Name }}</h2>
+      <h2>{{ product.Price | currency }}</h2>
+    </ion-label>
+  </ion-item>
+  
+  <div class="ion-padding">
+      <a class="menoo-external-link" href="https://menoo.com.uy/" target="_blank">Ask for item details</a>
+  </div>
+</ion-content>
